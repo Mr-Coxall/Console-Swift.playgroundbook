@@ -12,7 +12,9 @@ class TextEntryView: UITextView {
             return placeholderLabel.text
         }
         set (placeholderText) {
-            placeholderLabel.text = placeholderText
+            // removed this so it does not show and ask text
+            //placeholderLabel.text = placeholderText
+            placeholderLabel.text = ""
             placeholderWidth = placeholderText != nil ? (placeholderText! as NSString).size(withAttributes: [.font: font!]).width : 0.0
             invalidateIntrinsicContentSize()
         }

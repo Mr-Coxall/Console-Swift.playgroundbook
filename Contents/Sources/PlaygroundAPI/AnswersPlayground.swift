@@ -31,7 +31,9 @@ public func print(_ date: Date) {
 }
 
 /// Asks for a string in the current playground page's live view.
-public func readLine(_ placeholder: String? = nil) -> String {
+//public func readLine(_ placeholder: String? = nil) -> String {
+public func readLine() -> String? {
+    var placeholder = ""
     return answersLiveViewClient.readLine(forType: .string, placeholder: placeholder ?? "Input")
 }
 
