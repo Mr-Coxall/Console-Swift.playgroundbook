@@ -27,7 +27,7 @@ class AnswersViewController: UITableViewController, PlaygroundLiveViewMessageHan
         placeholderView.addSubview(titleLabel)
         
         let messageLabel = UILabel()
-        messageLabel.text = NSLocalizedString("Run your code to see your print() and ask() commands here", comment: "Content lablel when there is no output from the answers template")
+        messageLabel.text = NSLocalizedString("Run your code to see your print() and readLine() commands here", comment: "Content lablel when there is no output from the answers template")
         messageLabel.textColor = UIColor(white: 0.0, alpha: 0.5)
         messageLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .light)
         messageLabel.numberOfLines = 0
@@ -108,7 +108,7 @@ class AnswersViewController: UITableViewController, PlaygroundLiveViewMessageHan
         append(item: TranscriptItem(text: string), animated: true)
     }
     
-    func ask(forType valueType: AnswersValueType, placeholder: String) {
+    func readLine(forType valueType: AnswersValueType, placeholder: String) {
         append(item: TranscriptItem(userEnteredText: "", valueType: valueType, placeholder: placeholder, isEditing: true), animated: true)
     }
     
@@ -356,8 +356,8 @@ class AnswersViewController: UITableViewController, PlaygroundLiveViewMessageHan
         switch command {
         case .print(let string):
             print(string)
-        case .ask(let valueType, let placeholder):
-            ask(forType: valueType, placeholder: placeholder)
+        case .readLine(let valueType, let placeholder):
+            readLine(forType: valueType, placeholder: placeholder)
         case .clear:
             clear()
         default: break

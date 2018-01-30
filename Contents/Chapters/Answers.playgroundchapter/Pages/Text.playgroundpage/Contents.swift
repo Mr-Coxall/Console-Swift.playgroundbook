@@ -5,7 +5,7 @@ import Foundation
 //#-editable-code Tap to enter code
 print("What is your name?")
 
-let name = ask("Name")
+let name = readLine("Name")
 
 print("Hi " + name)
 

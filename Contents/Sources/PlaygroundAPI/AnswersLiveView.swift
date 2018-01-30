@@ -37,11 +37,11 @@ class AnswersLiveViewClient : PlaygroundRemoteLiveViewProxyDelegate  {
         RunLoop.main.run(until: Date(timeIntervalSinceNow: delay))
     }
     
-    func ask(forType valueType: AnswersValueType, placeholder: String) -> String {
+    func readLine(forType valueType: AnswersValueType, placeholder: String) -> String {
         guard Thread.isMainThread else {
             var returnString: String = ""
             DispatchQueue.main.sync { [unowned self] in
-                returnString = self.ask(forType: valueType, placeholder: placeholder)
+                returnString = self.readLine(forType: valueType, placeholder: placeholder)
             }
             return returnString
         }
@@ -51,7 +51,7 @@ class AnswersLiveViewClient : PlaygroundRemoteLiveViewProxyDelegate  {
         }
         
         liveViewMessageHandler.delegate = self
-        liveViewMessageHandler.send(AnswersCommand.ask(valueType, placeholder))
+        liveViewMessageHandler.send(AnswersCommand.readLine(valueType, placeholder))
         
         repeat {
             RunLoop.main.run(mode: .defaultRunLoopMode, before: Date(timeIntervalSinceNow: 0.1))

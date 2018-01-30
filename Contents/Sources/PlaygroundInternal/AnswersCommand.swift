@@ -4,7 +4,7 @@ import PlaygroundSupport
 
 enum AnswersCommand {
     case print(String)
-    case ask(AnswersValueType, String)
+    case readLine(AnswersValueType, String)
     case submit(String)
     case clear
 }
@@ -26,13 +26,13 @@ extension AnswersCommand {
             }
             
             self = .print(string)
-        case "Ask":
+        case "readLine":
             guard let valueType = dict["ValueType"] != nil ? AnswersValueType(dict["ValueType"]!) : .string,
                   case let .string(placeholder)? = dict["Placeholder"] else {
                 return nil
             }
             
-            self = .ask(valueType, placeholder)
+            self = .readLine(valueType, placeholder)
         case "Submit":
             guard case let .string(stringValue)? = dict["StringValue"] else {
                 return nil
@@ -54,9 +54,9 @@ extension AnswersCommand {
                 "String": .string(string),
             ]
             return .dictionary(dict)
-        case .ask(let valueType, let placeholder):
+        case .readLine(let valueType, let placeholder):
             let dict: [String: PlaygroundValue] = [
-                "Command": .string("Ask"),
+                "Command": .string("readLine"),
                 "ValueType": valueType.playgroundValue,
                 "Placeholder": .string(placeholder),
             ]
