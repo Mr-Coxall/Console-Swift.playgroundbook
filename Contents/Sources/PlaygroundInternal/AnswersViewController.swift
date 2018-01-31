@@ -27,7 +27,7 @@ class AnswersViewController: UITableViewController, PlaygroundLiveViewMessageHan
         placeholderView.addSubview(titleLabel)
         
         let messageLabel = UILabel()
-        messageLabel.text = NSLocalizedString("Run your code to see your print() and readLine() commands here", comment: "Content lablel when there is no output from the answers template")
+        messageLabel.text = NSLocalizedString("Run your code to see your console program run.", comment: "Content lablel when there is no output from the answers template")
         messageLabel.textColor = UIColor(white: 0.0, alpha: 0.5)
         messageLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .light)
         messageLabel.numberOfLines = 0
