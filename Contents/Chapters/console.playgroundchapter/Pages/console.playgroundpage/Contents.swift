@@ -18,8 +18,8 @@
 //  readLine(strippingNewline: Bool = default) -> String?
 //  See: https://developer.apple.com/documentation/swift/1641199-readline
 //
-//  Also if you do not unwrap the value returned for readLine, no error is given just nothing shows up
-//  If someone could fix that to give the same error as in the console, that would be great. :)
+//  Also if you do not unwrap the value returned from readLine, no error is given just nothing shows up
+//  If someone could fix this to give the same error as in the console, that would be great. :)
 //
 
 import Foundation
