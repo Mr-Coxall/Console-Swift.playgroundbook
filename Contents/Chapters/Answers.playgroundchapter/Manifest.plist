@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>TemplatePageFilename</key>
-	<string>Template.playgroundpage</string>
+	<string>console.playgroundpage</string>
 	<key>Version</key>
 	<string>1.0</string>
 	<key>Name</key>
-	<string>Answers</string>
+	<string>Console</string>
 	<key>InitialUserPages</key>
 	<array>
 		<string>console.playgroundpage</string>
