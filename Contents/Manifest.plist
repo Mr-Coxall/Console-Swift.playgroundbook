@@ -4,7 +4,7 @@
 <dict>
 	<key>Chapters</key>
 	<array>
-		<string>Console Swift.playgroundchapter</string>
+		<string>console.playgroundchapter</string>
 	</array>
 	<key>ContentIdentifier</key>
 	<string>ca.coxall.ConsoleSwift</string>
