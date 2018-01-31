@@ -10,8 +10,7 @@
 	<string>Answers</string>
 	<key>InitialUserPages</key>
 	<array>
-		<string>Text.playgroundpage</string>
-		<string>Types.playgroundpage</string>
+		<string>console.playgroundpage</string>
 	</array>
 </dict>
 </plist>
