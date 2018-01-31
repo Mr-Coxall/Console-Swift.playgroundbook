@@ -7,7 +7,6 @@
 //#-editable-code Tap to enter code
 //
 //  console.swift
-//  input_test
 //
 //  Created by Patrick Coxall on 2018-01-23.
 //  This playground takes Apple's "Answers" playground and removes Ask and Show
